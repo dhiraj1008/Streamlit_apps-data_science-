@@ -60,7 +60,7 @@ def generate(smiles, verbose=False):
 ######################
 
 
-url_icon="https://github.com/dhiraj1008/Streamlit_apps-data_science-/blob/main/app7_molecular_solubility_regression/solubility-logo.jpg"
+url_icon="https://pubs.acs.org/cms/10.1021/jp205399r/asset/images/medium/jp-2011-05399r_0001.gif"
 response = requests.get(url_icon)
 image = Image.open(io.BytesIO(response.content))
 newimage=image.resize((500,200))
