@@ -11,6 +11,12 @@ response = requests.get(url_icon)
 image = Image.open(io.BytesIO(response.content))
 newimage=image.resize((500,400))
 st.image(newimage,use_column_width=True)
+# If you are using the dna image included in this repo then
+
+image = Image.open('dna-logo.jpg')
+
+st.image(image, use_column_width=True)
+
 
 #page title
 
