@@ -1,7 +1,7 @@
 #DNA -> Deoxyribonucleic acid
 import pandas as pd
 import streamlit as st
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 from PIL import Image
 
 
