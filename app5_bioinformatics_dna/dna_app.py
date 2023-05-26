@@ -9,13 +9,13 @@ import requests
 url_icon="https://www.sckcen.be/sites/default/files/styles/teaser_lg/public/files/2022-03/2022_SCKCEN-Bioinformatics-Genomics.png?itok=UzO2Cqfs"
 response = requests.get(url_icon)
 image = Image.open(io.BytesIO(response.content))
-newimage=image.resize((500,400))
+newimage=image.resize((500,200))
 st.image(newimage,use_column_width=True)
 # If you are using the dna image included in this repo then
 
-image = Image.open('dna-logo.jpg')
+# image = Image.open('image_name(relativepath).jpg')
 
-st.image(image, use_column_width=True)
+#st.image(image, use_column_width=True)
 
 
 #page title
