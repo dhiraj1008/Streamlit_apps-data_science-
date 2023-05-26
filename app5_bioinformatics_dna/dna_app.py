@@ -6,7 +6,7 @@ from PIL import Image
 import io
 import requests
 
-url_icon="https://github.com/dhiraj1008/Streamlit_apps-data_science-/blob/main/app5_bioinformatics_dna/vector-cartoon-dna-icon.jpg"
+url_icon="https://www.sckcen.be/sites/default/files/styles/teaser_lg/public/files/2022-03/2022_SCKCEN-Bioinformatics-Genomics.png?itok=UzO2Cqfs"
 response = requests.get(url_icon)
 image = Image.open(io.BytesIO(response.content))
 newimage=image.resize((500,400))
