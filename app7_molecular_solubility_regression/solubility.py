@@ -8,7 +8,7 @@ from PIL import Image
 from rdkit import Chem
 from rdkit.Chem import Descriptors
 import requests
-
+import io
 ######################
 # Custom function
 ######################
