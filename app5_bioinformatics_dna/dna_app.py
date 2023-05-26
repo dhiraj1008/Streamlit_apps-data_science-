@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 
-image = Image.open("vector-cartoon-dna-icon.jpg")
+image = Image.open("https://github.com/dhiraj1008/Streamlit_apps-data_science-/blob/main/app5_bioinformatics_dna/vector-cartoon-dna-icon.jpg")
 newimage=image.resize((500,400))
 st.image(newimage,use_column_width=True)
 
