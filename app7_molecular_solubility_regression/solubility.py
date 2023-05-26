@@ -60,7 +60,7 @@ def generate(smiles, verbose=False):
 ######################
 
 
-url_icon="https://pubs.acs.org/cms/10.1021/jp205399r/asset/images/medium/jp-2011-05399r_0001.gif"
+url_icon="https://www.google.com/search?q=data+science+molecular+solubility+image+cartoon&tbm=isch&chips=q:data+science+molecular+solubility+image+cartoon,online_chips:physics:Wp6rR4H-bNM%3D&client=firefox-b-d&hl=en&sa=X&ved=2ahUKEwib5tWcoZP_AhVqktgFHa5eA9sQ4lYoAXoECAEQJw&biw=1536&bih=731#imgrc=Dx1FEbsek2tjeM&imgdii=9pNxo_AgFetj-M"
 response = requests.get(url_icon)
 image = Image.open(io.BytesIO(response.content))
 newimage=image.resize((500,200))
