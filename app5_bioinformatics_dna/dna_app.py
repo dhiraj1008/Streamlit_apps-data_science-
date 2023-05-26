@@ -3,9 +3,11 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 from PIL import Image
+import requests
 
-
-image = Image.open("https://github.com/dhiraj1008/Streamlit_apps-data_science-/blob/main/app5_bioinformatics_dna/vector-cartoon-dna-icon.jpg")
+url_icon="https://github.com/dhiraj1008/Streamlit_apps-data_science-/blob/main/app5_bioinformatics_dna/vector-cartoon-dna-icon.jpg"
+response = requests.get(url_icon)
+img = Image.open(BytesIO(response.content))
 newimage=image.resize((500,400))
 st.image(newimage,use_column_width=True)
 
