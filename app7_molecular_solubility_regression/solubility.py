@@ -7,7 +7,7 @@ import joblib
 from PIL import Image
 from rdkit import Chem
 from rdkit.Chem import Descriptors
-
+import requests
 
 ######################
 # Custom function
@@ -59,8 +59,15 @@ def generate(smiles, verbose=False):
 # Page Title
 ######################
 
-image = Image.open('solubility-logo.jpg')
 
+url_icon="https://www.sckcen.be/sites/default/files/styles/teaser_lg/public/files/2022-03/2022_SCKCEN-Bioinformatics-Genomics.png?itok=UzO2Cqfs"
+response = requests.get(url_icon)
+image = Image.open(io.BytesIO(response.content))
+newimage=image.resize((500,200))
+"""
+st.image(newimage,use_column_width=True)
+image = Image.open('solubility-logo.jpg')
+"""
 st.image(image, use_column_width=True)
 
 st.write("""
