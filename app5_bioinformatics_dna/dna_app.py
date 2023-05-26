@@ -7,7 +7,7 @@ import requests
 
 url_icon="https://github.com/dhiraj1008/Streamlit_apps-data_science-/blob/main/app5_bioinformatics_dna/vector-cartoon-dna-icon.jpg"
 response = requests.get(url_icon)
-image = Image.open(BytesIO(response.content))
+image = Image.open(response.content)
 newimage=image.resize((500,400))
 st.image(newimage,use_column_width=True)
 
