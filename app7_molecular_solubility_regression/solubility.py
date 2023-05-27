@@ -114,7 +114,7 @@ path_to_model = "app7_molecular_solubility_regression/linearregressionmodel.jobl
 
 
 with open(path_to_model, 'rb') as file:
-    model = joblib.load(file)
+    load_model = joblib.load(file)
 # Reads in saved model
 #load_model = joblib.load("linearregressionmodel.joblib")
 
