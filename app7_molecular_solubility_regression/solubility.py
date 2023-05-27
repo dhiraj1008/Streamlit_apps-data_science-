@@ -107,7 +107,7 @@ X[1:] # Skips the dummy first item
 
 
 dir = path.Path(__file__).abspath()
-sys.append.path(dir.parent.parent)
+sys.path.append(dir.parent.parent)
 
 # load model
 path_to_model = './linearregressionmodel.joblib'
