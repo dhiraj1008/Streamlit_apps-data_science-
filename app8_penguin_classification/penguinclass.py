@@ -70,7 +70,7 @@ else:
     st.write(df)
 
 # Reads in saved classification model
-load_clf = joblib.load("modelpenguinclass.joblib")
+load_clf = joblib.load("app8_penguin_classification/modelpenguinclass.joblib")
 # Apply model to make predictions
 prediction = load_clf.predict(df)
 prediction_proba = load_clf.predict_proba(df)
