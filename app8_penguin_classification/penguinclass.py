@@ -3,6 +3,8 @@ import streamlit as st
 from sklearn.ensemble import RandomForestClassifier
 import numpy as np
 import joblib
+import path
+import sys
 st.write("""
 # Penguin Prediction App
 
@@ -70,11 +72,19 @@ else:
     st.write(df)
 
 # Reads in saved classification model
-load_clf = joblib.load("app8_penguin_classification/modelpenguinclass.joblib")
+dir = path.Path(__file__).abspath()
+sys.path.append(dir.parent.parent)
+
+# load model
+path_to_model = "app7_molecular_solubility_regression/linearregressionmodel.joblib"
+
+
+with open(path_to_model, 'rb') as file:
+    load_clf = joblib.load(file)
+#load_clf = joblib.load("app8_penguin_classification/modelpenguinclass.joblib")
 # Apply model to make predictions
 prediction = load_clf.predict(df)
 prediction_proba = load_clf.predict_proba(df)
-
 st.subheader('Prediction')
 penguins_species = np.array(['Adelie','Chinstrap','Gentoo'])
 st.write(penguins_species[prediction])
