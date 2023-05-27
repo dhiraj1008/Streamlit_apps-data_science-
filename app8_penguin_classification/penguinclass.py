@@ -44,7 +44,7 @@ else:
     
 #Combine User input features with entire penguins dataset
 # This will be usefull for the encoding phase
-penguin_raw=pd.read_csv('penguins_cleaned.csv')
+penguin_raw=pd.read_csv('app8_penguin_classification/penguins_cleaned.csv')
 penguin=penguin_raw.drop(columns=['species'])
 df = pd.concat([input_df,penguin],axis=0)
 st.dataframe(df)
