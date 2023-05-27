@@ -6,7 +6,8 @@ from sklearn.ensemble import RandomForestRegressor
 import joblib
 import matplotlib.pyplot as plt
 import seaborn as sb
-
+import sys
+import path
 st.write("""
 # Boston House Price Prediction App
 This app predicts the **Boston House Price**!
@@ -61,8 +62,19 @@ st.header('Specified Input parameters')
 st.write(df)
 st.write('---')
 
+
+# Reads in saved classification model
+dir = path.Path(__file__).abspath()
+sys.path.append(dir.parent.parent)
+
+# load model
+path_to_model = ""
+
+
+with open(path_to_model, 'rb') as file:
+    load_clf = joblib.load(file)
 # Reloading Regression model
-model = joblib.load("Building_model\\modelBoston.joblib")
+#model = joblib.load("Building_model\\modelBoston.joblib")
 # Apply Model to Make Prediction
 prediction = model.predict(df)
 
