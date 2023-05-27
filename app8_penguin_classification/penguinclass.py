@@ -76,7 +76,7 @@ dir = path.Path(__file__).abspath()
 sys.path.append(dir.parent.parent)
 
 # load model
-path_to_model = "app7_molecular_solubility_regression/linearregressionmodel.joblib"
+path_to_model = "app8_penguin_classification/modelpenguinclass.joblib"
 
 
 with open(path_to_model, 'rb') as file:
