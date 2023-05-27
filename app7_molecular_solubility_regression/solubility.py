@@ -9,6 +9,8 @@ from rdkit import Chem
 from rdkit.Chem import Descriptors
 import requests
 import io
+import sys
+import path
 ######################
 # Custom function
 ######################
@@ -103,8 +105,18 @@ X[1:] # Skips the dummy first item
 # Pre-built model
 ######################
 
+
+dir = path.Path(__file__).abspath()
+sys.append.path(dir.parent.parent)
+
+# load model
+path_to_model = './linearregressionmodel.joblib'
+
+
+with open(path_to_model, 'rb') as file:
+    model = joblib.load(file)
 # Reads in saved model
-load_model = joblib.load("linearregressionmodel.joblib")
+#load_model = joblib.load("linearregressionmodel.joblib")
 
 # Apply model to make predictions
 prediction = load_model.predict(X)
