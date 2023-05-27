@@ -68,7 +68,7 @@ dir = path.Path(__file__).abspath()
 sys.path.append(dir.parent.parent)
 
 # load model
-path_to_model = ""
+path_to_model = "app9_Boston_HouseP_regression/Building_model/modelBoston.joblib"
 
 
 with open(path_to_model, 'rb') as file:
