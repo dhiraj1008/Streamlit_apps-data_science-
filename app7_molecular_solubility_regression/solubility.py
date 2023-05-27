@@ -110,7 +110,7 @@ dir = path.Path(__file__).abspath()
 sys.path.append(dir.parent.parent)
 
 # load model
-path_to_model = './linearregressionmodel.joblib'
+path_to_model = 'linearregressionmodel.joblib'
 
 
 with open(path_to_model, 'rb') as file:
