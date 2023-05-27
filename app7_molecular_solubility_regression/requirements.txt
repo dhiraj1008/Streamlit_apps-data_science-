@@ -7,3 +7,4 @@ rdkit==2022.9.5
 requests==2.28.2
 Pillow==9.5.0
 path==16.6.0
+scikit-learn==1.2.2
