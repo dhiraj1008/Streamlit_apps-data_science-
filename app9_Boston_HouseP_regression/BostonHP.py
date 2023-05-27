@@ -72,7 +72,7 @@ path_to_model = "app9_Boston_HouseP_regression/Building_model/modelBoston.joblib
 
 
 with open(path_to_model, 'rb') as file:
-    load_clf = joblib.load(file)
+    model = joblib.load(file)
 # Reloading Regression model
 #model = joblib.load("Building_model\\modelBoston.joblib")
 # Apply Model to Make Prediction
