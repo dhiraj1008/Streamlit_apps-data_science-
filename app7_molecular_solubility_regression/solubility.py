@@ -110,7 +110,7 @@ dir = path.Path(__file__).abspath()
 sys.path.append(dir.parent.parent)
 
 # load model
-path_to_model = "C:/Users/darsh/Desktop/Dhiraj/Datascience1/app7_molecular_solubility_regression/linearregressionmodel.joblib"
+path_to_model = "app7_molecular_solubility_regression/linearregressionmodel.joblib"
 
 
 with open(path_to_model, 'rb') as file:
