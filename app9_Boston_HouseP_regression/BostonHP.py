@@ -15,7 +15,7 @@ This app predicts the **Boston House Price**!
 st.write('---')
 
 # Loads the Boston House Price Dataset
-boston = pd.read_csv("Building_model\BostonHousing.csv")
+boston = pd.read_csv("app9_Boston_HouseP_regression/Building_model/BostonHousing.csv")
 X=boston.drop('medv',axis=1)
 Y=boston['medv']
 # Sidebar
